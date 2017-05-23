@@ -22,7 +22,6 @@
         </Style>
     </Page.Resources>
 
-
     <StackPanel>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>

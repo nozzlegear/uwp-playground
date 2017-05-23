@@ -71,6 +71,14 @@ namespace XamlBoys
                     parameters = "Have you ever heard the tragedy of Darth Plagueis the Wise?";
                     break;
 
+                case "DataButton":
+                    target = typeof(DataBindingPage);
+                    break;
+
+                case "UserControlButton":
+                    target = typeof(UserControlPage);
+                    break;
+
                 case "SettingsButton":
                     target = typeof(SettingsPage);
                     parameters = "Are you threatening me, Master Jedi?";

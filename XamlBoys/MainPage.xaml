@@ -61,6 +61,30 @@
                             <TextBlock Grid.Column="1" Text="Details Page" />
                         </Grid>
                     </Button>
+                    <Button Name="DataButton"
+                            Style="{StaticResource NavButton}"
+                            Click="NavButton_Click">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="48" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <SymbolIcon Grid.Column="0" Symbol="Directions" />
+                            <TextBlock Grid.Column="1" Text="Data Binding Page" />
+                        </Grid>
+                    </Button>
+                    <Button Name="UserControlButton"
+                            Style="{StaticResource NavButton}"
+                            Click="NavButton_Click">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="48" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <SymbolIcon Grid.Column="0" Symbol="Contact" />
+                            <TextBlock Grid.Column="1" Text="User Control Page" />
+                        </Grid>
+                    </Button>
                 </StackPanel>
                 <StackPanel Style="{StaticResource AlignToSides}"
                             RelativePanel.AlignBottomWithPanel="True">
