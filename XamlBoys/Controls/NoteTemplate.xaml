@@ -9,10 +9,31 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid>
-        <StackPanel>
-            <TextBlock x:Name="NoteTitle" Text="{x:Bind Note.Title}" />
-            <TextBlock x:Name="NoteText" Text="{x:Bind Note.Text}" />
-        </StackPanel>
-    </Grid>
+    <StackPanel>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualStateGroup.States>
+                    <VisualState x:Name="Phone">
+                        <VisualState.StateTriggers>
+                            <AdaptiveTrigger MinWindowWidth="0" />
+                        </VisualState.StateTriggers>
+                        <VisualState.Setters>
+                            <Setter Target="NoteTitle.FontSize" Value="18" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Tablet">
+                        <VisualState.StateTriggers>
+                            <AdaptiveTrigger MinWindowWidth="600" />
+                        </VisualState.StateTriggers>
+                        <VisualState.Setters>
+                            <Setter Target="NoteTitle.FontSize" Value="36" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup.States>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <TextBlock x:Name="NoteTitle" Text="{x:Bind Note.Title}" />
+        <TextBlock x:Name="NoteText" Text="{x:Bind Note.Text}" />
+    </StackPanel>
+    
 </UserControl>

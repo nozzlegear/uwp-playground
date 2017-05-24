@@ -22,12 +22,12 @@ namespace XamlBoys.Controls
     public sealed partial class NoteTemplate : UserControl
     {
         private Note Note { get { return this.DataContext as Note; } }
-
+        
         public NoteTemplate()
         {
             this.InitializeComponent();
 
-            DataContextChanged += (s, e) => Bindings.Update();
+            this.DataContextChanged += (s, e) => Bindings.Update();
         }
     }
 }
